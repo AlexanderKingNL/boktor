@@ -1,0 +1,39 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author 011537
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int gebruikersinvoer=0;
+    System.out.print("Waar wil je de facualiteit van weten? ");
+    gebruikersinvoer = input.nextInt ();
+    
+    int oplossing = facualiteit(gebruikersinvoer);
+    
+    System.out.println("De oplossing is "+oplossing);
+    }
+    
+    public static int facualiteit(int invoer){
+        if(invoer==1){
+            return 1;
+            } else {
+            return invoer*facualiteit(invoer-1);
+}
+        
+    }
+    
+}
+
